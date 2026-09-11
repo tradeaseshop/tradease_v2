@@ -34,7 +34,7 @@ for (const sql of migrations) {
 
 // Where uploaded KYC documents (ID photos, proof-of-address files) are
 // stored on disk. Created on startup if it doesn't exist yet.
-export const KYC_UPLOAD_DIR = path.join(__dirname, 'uploads', 'kyc');
+export const KYC_UPLOAD_DIR = path.join(appDir, 'uploads', 'kyc');
 fs.mkdirSync(KYC_UPLOAD_DIR, { recursive: true });
 
 export default db;
