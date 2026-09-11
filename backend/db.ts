@@ -3,8 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
+const __dirname = typeof globalThis.__dirname !== 'undefined' ? globalThis.__dirname : path.dirname(fileURLToPath(import.meta.url));
 const DB_PATH = process.env.DATABASE_PATH || path.join(__dirname, 'tradeease.db');
 
 export const db = new Database(DB_PATH);
