@@ -3,14 +3,17 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-const __dirname = typeof globalThis.__dirname !== 'undefined' ? globalThis.__dirname : path.dirname(fileURLToPath(import.meta.url));
-const DB_PATH = process.env.DATABASE_PATH || path.join(__dirname, 'tradeease.db');
+   const appDir = typeof __dirname !== 'undefined'
+     ? __dirname
+     : path.dirname(fileURLToPath(import.meta.url));
+   
+   const DB_PATH = process.env.DATABASE_PATH || path.join(appDir, 'tradeease.db');
 
 export const db = new Database(DB_PATH);
 db.pragma('journal_mode = WAL');
 db.pragma('foreign_keys = ON');
 
-const schema = fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf-8');
+const schema = fs.readFileSync(path.join(appDir, 'schema.sql'), 'utf-8');
 db.exec(schema);
 
 // Safety net for databases created before these columns existed (CREATE TABLE
