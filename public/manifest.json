@@ -1,0 +1,22 @@
+{
+  "short_name": "TradeEase",
+  "name": "TradeEase Multivendor Marketplace",
+  "description": "Multi-vendor Escrow-backed Marketplace with Secure Settlements and DELIVERI Partner Logistics",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/000000/shopify.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/000000/shopify.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
