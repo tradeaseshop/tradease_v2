@@ -1,6 +1,0 @@
-{
-  "name": "TradeEase",
-  "description": "A role-based multivendor marketplace app supporting Buyer and Vendor modes, splash screen, onboarding carousel, Nigeria location selection, and live theme updates.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
