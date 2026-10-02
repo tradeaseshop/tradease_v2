@@ -23,7 +23,7 @@ export default function Walkthrough({ onComplete }: WalkthroughProps) {
       badge: "SHOP LOCAL",
       title: "Everything You Need, Close By",
       subtitle: "Real vendors, fair prices",
-      description: "Phones, clothes, books, groceries, and more, from sellers across Nigeria, all priced in Naira.",
+      description: "Phones, clothes, books, groceries, and more, from sellers across Nigeria.",
       gradient: "from-emerald-500 to-teal-600",
       icon: (
         <div className="relative">
