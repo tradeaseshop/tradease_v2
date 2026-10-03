@@ -1,5 +1,0 @@
-[variables]
-NODE_ENV = "production"
-
-[phases.install]
-cmds = ["npm install --no-audit --no-fund"]
