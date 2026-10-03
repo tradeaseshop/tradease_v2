@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;850;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+/* Tailwind v4 defaults `dark:` to the OS-level prefers-color-scheme media
+   query, which ignores any dark-mode toggle button entirely. This makes
+   `dark:` respond to the `.dark` class the app actually manages (added to
+   <html> in App.tsx) instead, so the in-app light/dark toggle works. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Exact brand colors requested by the design guidelines */
+  --color-primary-dark: #0D2E2A;
+  --color-primary-green: #6DBE2E;
+  --color-light-green: #A8D96B;
+  --color-text-white: #FFFFFF;
+
+  /* Map standard tailwind theme color hooks for instantaneous global re-theming */
+  --color-emerald-50: #f0f7ea;
+  --color-emerald-100: #e2f0d4;
+  --color-emerald-200: #c6e3ab;
+  --color-emerald-500: #6DBE2E;
+  --color-emerald-600: #6DBE2E;
+  --color-emerald-700: #599d24;
+  --color-emerald-800: #467b1c;
+  --color-emerald-900: #0D2E2A;
+  --color-emerald-950: #0D2E2A;
+
+  /* Redirect slate colors to our Primary Dark (#0D2E2A) to change dark canvases and container structures */
+  --color-slate-50: #f0f4f3;
+  --color-slate-100: #e1e9e7;
+  --color-slate-200: #b9cac6;
+  --color-slate-300: #93aca6;
+  --color-slate-400: #6d8e85;
+  --color-slate-700: #1b4d47;
+  --color-slate-800: #133c38;
+  --color-slate-900: #0D2E2A;
+  --color-slate-950: #0D2E2A;
+
+  /* Overload teal gradient colors toward the new Light Green to ensure nice transitions */
+  --color-teal-500: #A8D96B;
+  --color-teal-600: #A8D96B;
+  --color-teal-700: #6DBE2E;
+}
+
+/* Custom global high-fidelity viewport styles for TradeEase */
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar utility overrides for card list-rows */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
