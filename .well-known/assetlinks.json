@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "ng.tradease.app",
+        "sha256_cert_fingerprints": ["36:AB:6B:7E:18:A0:31:4C:5C:B2:A8:5A:E6:F0:A7:C2:66:BC:E0:21:9F:2C:70:56:5E:82:CD:E3:8E:5A:97:C8"]
+      }
+    }]
