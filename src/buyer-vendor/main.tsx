@@ -1,0 +1,28 @@
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
+import App from './App.tsx';
+import PaystackCallback from '../components/PaystackCallback';
+import '../index.css';
+import RuntimeErrorBoundary from '../components/RuntimeErrorBoundary';
+
+// Registered so the site qualifies as an installable PWA — needed for
+// wrapping it as an Android app via PWABuilder/TWA. See public/sw.js for
+// why it intentionally does no caching.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {
+      // Non-fatal: the site still works as a normal website without it,
+      // it just won't qualify for "Add to Home Screen" style installs.
+    });
+  });
+}
+
+const isPaystackCallback = window.location.pathname.replace(/\/+$/, '') === '/paystack/callback';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <RuntimeErrorBoundary appName="TradeEase">
+      {isPaystackCallback ? <PaystackCallback /> : <App />}
+    </RuntimeErrorBoundary>
+  </StrictMode>,
+);
