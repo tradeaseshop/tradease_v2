@@ -1,8 +1,11 @@
 TRADEEASE
+
+
 Platform Overview, Technology, Achievements & Future Direction
 Built by FAUCH — Technology, Digital Marketing & Business Development
 
-What TradeEase Is About
+What TradeEase Is About: 
+
 TradeEase is a Nigerian multi-vendor digital marketplace designed to connect buyers, independent vendors and delivery providers in one connected commerce ecosystem. Buyers can discover products, manage carts, place orders, make payments, fund wallets and follow fulfilment, while vendors can create stores, list products, manage orders and receive marketplace earnings.
 TradeEase is designed as a provider-independent logistics platform. TradeEase acts as the commerce and fulfilment orchestrator and can integrate multiple logistics companies through APIs and webhooks. DELIVERI, which is owned by TradeEase, is the preferred logistics provider, but it is not the only provider.
 The broader objective is to provide practical digital marketplace infrastructure for Nigerian commerce while remaining extensible enough to connect additional payment, logistics, verification and business services.
